@@ -1,0 +1,64 @@
+.biblioteca-container {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Navegador de letras */
+
+.alfabeto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 25px;
+}
+
+.letra {
+  cursor: pointer;
+  padding: 6px 10px;
+  background: #eeeeee;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.letra:hover {
+  background: #6d2062;
+  color: white;
+}
+
+.letra.activa {
+  background: #6d2062;
+  color: white;
+}
+
+.limpiar {
+  background: #333;
+  color: white;
+}
+
+/* Lista */
+
+.lista-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.libro-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.libro-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.libro-card h4 {
+  margin: 0 0 5px 0;
+}

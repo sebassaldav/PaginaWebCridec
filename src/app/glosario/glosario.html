@@ -1,1 +1,32 @@
-<p>glosario works!</p>
+<div class="biblioteca-container">
+
+    <h2>Biblioteca</h2>
+
+    <!-- Navegador alfabético -->
+    <div class="alfabeto">
+
+        <span class="letra limpiar" (click)="limpiarFiltro()">
+            Todos
+        </span>
+
+        @for (letra of alfabeto; track letra) {
+        <span class="letra" [class.activa]="letra === letraSeleccionada" (click)="filtrarPorLetra(letra)">
+            {{ letra }}
+        </span>
+        }
+
+    </div>
+
+    <div class="lista-libros">
+
+        @for(termino of terminosFiltrados; track termino){
+        <div class="libro-card">
+
+            <h4>{{ termino.concepto }}</h4>
+            <p>{{ termino.definicion }}</p>
+
+        </div>
+    }
+    </div>
+
+</div>
