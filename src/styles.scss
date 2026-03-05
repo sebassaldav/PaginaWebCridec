@@ -36,3 +36,25 @@ body {
   height: 100%;
 }
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Titulos';
+  src: url('./assets/fonts/Franklin-Gothic-Heavy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Parrafos';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Especial';
+  src: url('./assets/fonts/Montserrat-ThinItalic.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5{
+  font-family: "Titulos";
+}
+
+p{
+  font-family: "Parrafos";
+}

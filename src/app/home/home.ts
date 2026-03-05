@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Navbar } from "../navbar/navbar";
-import { Footer } from "../footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule, Navbar, Footer],
+  imports: [RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

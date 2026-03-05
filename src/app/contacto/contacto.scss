@@ -1,0 +1,100 @@
+.contacto{
+    
+}
+
+.example-card{
+    width: 100%;
+    max-width: 600px;
+    align-content: center;
+    background-color: white;
+    border: 4px solid #05a42d;
+    
+}
+
+h3{
+    text-align: center;
+}
+
+
+.content{
+    margin: 15px;
+}
+
+.button-purple {
+  color: #f7f4ef;
+  background-color: #05a42d;
+  border: 1px solid #05a42d;
+  border-radius: 20px;
+  height: 40px;
+}
+
+.button-purple:hover{
+    background-color: #10f94a;
+}
+
+
+/* Estilo base para todos los inputs */
+.input-base {
+  width: 95%;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #05a42d;
+  border-radius: 6px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #05a42d;
+    border-radius: 6px;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Cuando el campo es válido */
+.input-valid:focus {
+  border-color: #05a42d; /* azul */
+  outline: none;
+}
+
+/* Cuando el campo es inválido */
+.input-error {
+  border-color: #e63946; /* rojo */
+  background-color: white;
+}
+
+.input-error:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+/* Mensaje de error */
+.error-message {
+  font-size: 13px;
+  color: #e63946;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+label{
+    margin: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

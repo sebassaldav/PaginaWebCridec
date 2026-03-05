@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-glosario',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './glosario.html',
   styleUrl: './glosario.scss',
 })

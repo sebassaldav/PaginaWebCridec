@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Navbar } from "../navbar/navbar";
 
 @Component({
   selector: 'app-solicitudes',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './solicitudes.html',
   styleUrl: './solicitudes.scss',
 })

@@ -1,2 +1,127 @@
-<app-navbar></app-navbar>
-<p>contacto works!</p>
+<div class="container-fluid contacto">
+    <div class="row">
+        <div class="col-md-12 col-sm-12" style="text-align: center;">
+            <h1>CONTACTO</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-12 mt-5">
+            <h3>Envía directamente un correo electrónico</h3>
+            <p style="font-size: medium; text-align: right;">
+                Con el fin de que pueda conocer mejor tu caso, llena el siguiente formulario y envía la información.
+                En el menor tiempo posible, obtendrás una respuesta vía correo electrónico o comunicación directa al
+                teléfono brindado.
+            </p>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <mat-card class="example-card" appearance="outlined">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title style="text-align: end;">Redacte su solicitud</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+                                <label for="nombre" class=""> Nombre completo </label>
+                                <br>
+                                <input id="nombre" type="text" formControlName="nombre" [ngClass]="{
+                        'input-base': true,
+                        'input-error': isFieldInvalid('nombre'),
+                        'input-valid': !isFieldInvalid('nombre')
+                    }" placeholder="Ej: Juan Pérez" />
+                                @if (isFieldInvalid('nombre')) {
+                                <p class="error-message">
+                                    {{ getFieldError('nombre') }}
+                                </p>
+                                }
+                                <br>
+                                <label for="correo_electronico" class=""> Correo electrónico </label>
+                                <br>
+                                <input id="correo_electronico" type="text" formControlName="correo_electronico"
+                                    [ngClass]="{
+                        'input-base': true,
+                        'input-error': isFieldInvalid('correo_electronico'),
+                        'input-valid': !isFieldInvalid('correo_electronico')
+                    }" placeholder="Ej: juanperez@example.com" />
+                                @if (isFieldInvalid('correo_electronico')) {
+                                <p class="error-message">
+                                    {{ getFieldError('correo_electronico') }}
+                                </p>
+                                }
+                                <br>
+                                <label for="telefono" class=""> Número de celular </label>
+                                <br>
+                                <input id="telefono" type="number" formControlName="telefono" [ngClass]="{
+                        'input-base': true,
+                        'input-error': isFieldInvalid('telefono'),
+                        'input-valid': !isFieldInvalid('telefono')
+                    }" placeholder="Ej: 3101234567" />
+                                @if (isFieldInvalid('telefono')) {
+                                <p class="error-message">
+                                    {{ getFieldError('telefono') }}
+                                </p>
+                                }
+                                <br>
+                                <label for="asunto" class=""> Asunto </label>
+                                <br>
+                                <input id="asunto" type="text" formControlName="asunto" [ngClass]="{
+                        'input-base': true,
+                        'input-error': isFieldInvalid('asunto'),
+                        'input-valid': !isFieldInvalid('asunto')
+                    }" placeholder="Ej: Solicitud de información" />
+                                @if (isFieldInvalid('asunto')) {
+                                <p class="error-message">
+                                    {{ getFieldError('asunto') }}
+                                </p>
+                                }
+                                <br>
+                                <label for="mensaje" class=""> Mensaje o solicitud </label>
+                                <br>
+                                <textarea id="mensaje" formControlName="mensaje" rows="4" placeholder="Mensaje">
+                            </textarea>
+                                @if (isFieldInvalid('mensaje')) {
+                                <p class="error-message">
+                                    {{ getFieldError('mensaje') }}
+                                </p>
+                                }
+                                <button class="button-purple" type="submit">Envíe su solicitud</button>
+                            </form>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 mt-5">
+            <h3>O contáctanos por los siguientes medios</h3>
+            <div class="row">
+                <h5>Dirección</h5>
+                <a
+                    href="https://www.google.com/maps/place/CRIDEC-+ACICAL/@5.4104944,-75.701819,17z/data=!3m1!4b1!4m6!3m5!1s0x8e4707f1838c8cd5:0x5d68b51c30b602ee!8m2!3d5.4104944!4d-75.701819!16s%2Fg%2F11n83g1rcc?entry=ttu&g_ep=EgoyMDI2MDMwMy4wIKXMDSoASAFQAw%3D%3D">
+                    Vía Riosucio - Bonafont, vereda el Edén
+                </a>
+            </div>
+            <br><br>
+            <div class="row">
+                <h5>Correos electrónicos</h5>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <br><br>
+            <div class="row">
+                <h5>Teléfono de contacto</h5>
+                <span> 312 7227662 </span>
+            </div>
+            <br><br>
+            <div class="row">
+                <h5>Y redes sociales</h5>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-youtube"></i></a>
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

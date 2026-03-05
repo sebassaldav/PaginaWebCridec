@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Navbar } from "../navbar/navbar";
 
 @Component({
   selector: 'app-consejerias',
-  imports: [Navbar],
+  imports: [],
   templateUrl: './consejerias.html',
   styleUrl: './consejerias.scss',
 })
